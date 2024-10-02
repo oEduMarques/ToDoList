@@ -30,7 +30,9 @@ function removeTask() {
     for (let item of items) {
         let checkbox = item.querySelector('input[type="checkbox"]');
         if (checkbox && checkbox.checked) {
-            list.removeChild(item); 
+            list.removeChild(item);
+            stats.innerHTML = 'Item removed'
+            stats.style.color = 'red'
         }
     };
 }
