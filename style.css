@@ -1,22 +1,69 @@
+
 body {
+    display: flex;
+    background-color: rgb(183, 179, 241);
+    font-family:'Courier New', Courier, monospace;
+    border: 2px solid black;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(6, 3, 53);
+    position: fixed;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.title {
+    margin-right: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
+}
+
+a:hover{
+    color: rgb(161, 153, 153);
+}
+
+main{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0 auto;
-    background-color: rgb(6, 3, 53);
+}
+
+select{
+    font-weight: bold;
     font-family:'Courier New', Courier, monospace;
+    background-color: #faf5f5;
+    margin: 30px;
+    border: none;
+}
+
+select:hover{
+    cursor: pointer;
 }
 
 .completed {
     text-decoration: line-through;
     color: gray;
-}
-
-.title {
-    color: white;
-    font-size: 6em;
 }
 
 h3{
@@ -30,44 +77,35 @@ li{
     list-style-type: none;
 }
 
-
 .todo-container{
     background-color: #faf5f5;
     box-shadow: 0 0 6px #faf5f5;
     text-align: center;
     flex-direction: column;
-    margin: 0px;
+    margin-bottom: 100px;
     padding: 10px;
-    height: 200px;
-    width: 100%;
+    padding-bottom: 30px;
     border-radius: 10px;
-}
-
-input{
-    background-color: rgb(215, 201, 241);
-    margin: 0;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    
 }
 
 #input-container {
-
+    width: 100%;
     display: flex;
-    align-items: center;
 }
 
 input.task {
+    background-color: rgb(215, 201, 241);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
     margin-right: 10px;
     width: 450px;
 }
 
 #buttonAddTask {
-    color: rgb(6, 3, 53);
-    background-color: #f5f5f5;
-    color: black;
-    text-shadow: 0 0 10px;
+    color: white;
+    background-color: rgb(6, 3, 53);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -77,7 +115,8 @@ input.task {
 }
 
 #buttonAddTask:hover {
-    background-color: #2980b9; 
+    text-shadow: 0 0 10px white;
+    background-color: #0f334b; 
     transform: scale(1.1); 
 }
 
@@ -94,8 +133,8 @@ input.task {
 }
 
 #buttonRemoveTask:hover{
-    box-shadow: 0 0 30px black;
     background-color: #0f334b; 
+    text-shadow: 0 0 10px white;
     transform: scale(1.1); 
 }
 
@@ -114,11 +153,65 @@ input.task {
 #buttonMarkCompleted:hover{
     background-color: #3f7394; 
     transform: scale(1.1); 
-    box-shadow: 0 0 30px black;
+    text-shadow: 0 0 10px white;
 }
 
 input[type="checkbox"] {
     margin-right: 10px;
     color: red;
     border-radius: 10px;
+}
+
+
+/* Style todolist.html */
+
+.register-container{
+    background-color: #faf5f5;
+    box-shadow: 0 0 6px #faf5f5;
+    text-align: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+
+#descFilter{
+    display: flex;
+    box-sizing: border-box;
+    width: 350px;
+}
+
+#search{
+    color: white;
+    text-shadow: none;
+    background-color: rgb(6, 3, 53);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+#search:hover{
+    text-shadow: 0 0 10px white;
+    background-color: #0f334b; 
+    transform: scale(1.1); 
+}
+
+#filter{
+    display: flex;
+    width: 100%;
+}
+
+#descFilter{
+    width: 100%;
+    background-color: rgb(215, 201, 241);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    width: 450px;
 }

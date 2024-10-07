@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>To Do List</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="title">To Do List</h1>
+        <nav>
+            <a href="register.html">Register</a>
+            <a href="todolist.html">My List</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="todo-container">
+            <h3 id="stats">Register Task</h3>
+            
+            <select id="day">
+                <option value="">Day</option>
+                <!-- Os dias serão gerados via JavaScript -->
+            </select>
+            
+            <select id="month">
+                <option value="Month">Month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+
+            
+            <select id="year">
+                <option value="">Year</option>
+                <!-- Os anos serão gerados via JavaScript -->
+            </select>
+            
+            <select id="typeTask">
+                <option value="typeTask">Type task</option>
+                <option value="personal">Personal</option>
+                <option value="professional">Professional</option>
+                <option value="academic">Academic</option>
+                <option value="household">Household</option>
+                <option value="leisure">Leisure</option>
+                <option value="voluntering">Voluntering</option>
+                <option value="personal">Personal</option>
+                <option value="planning">Planning</option>
+            </select>
+
+            <div id="input-container"> <!-- Contêiner para o input e o botão -->
+                <form id="toDo">
+                    <input type="text" id="task" placeholder="Description" class="task">
+                </form>
+                <button id="buttonAddTask">Save</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
