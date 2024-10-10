@@ -49,6 +49,10 @@ main{
     margin: 0 auto;
 }
 
+#day year{
+    border: none;
+}
+
 select{
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
