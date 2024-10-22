@@ -48,9 +48,16 @@ main{
     height: 100vh;
     margin: 0 auto;
 }
-
-#day year{
-    border: none;
+#date {
+    align-content: center;
+}
+#day, #year{
+    background-color: #faf5f5;
+    border-color: rgb(215, 201, 241);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
 }
 
 select{
@@ -97,7 +104,7 @@ li{
     display: flex;
 }
 
-input.task {
+input.description {
     background-color: rgb(215, 201, 241);
     width: 100%;
     border: none;
@@ -170,14 +177,21 @@ input[type="checkbox"] {
 /* Style todolist.html */
 
 .register-container{
-    background-color: #faf5f5;
-    box-shadow: 0 0 6px #faf5f5;
-    text-align: center;
+    display: flex;
     flex-direction: column;
+    text-align: center;
     margin: 0px;
     padding: 10px;
     padding-bottom: 30px;
     border-radius: 10px;
+    background-color: #faf5f5;
+    box-shadow: 0 0 6px #faf5f5;
+    width: 600px;
+}
+
+#form-container {
+    display: flex;
+    margin: auto;
 }
 
 #descFilter{

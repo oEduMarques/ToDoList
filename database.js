@@ -56,6 +56,7 @@ let month = document.getElementById('month').value
 let day = document.getElementById('day').value
 let type = document.getElementById('type').value
 let description = documen.getElementById('description').value
+let buttonAddList = document.getElementById('buttonAddTask');
 
 function registerTask() {
     let task = new Task(year, month, day, type, description)
