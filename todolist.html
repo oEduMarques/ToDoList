@@ -21,7 +21,6 @@
         <div class="register-container">
             <h3 id="stats">My List Tasks</h3>
             <div id="form-container">
-
                 <form id="date">
                     <input type="number" id="day" placeholder="Day" class="day">
                 </form>
@@ -48,25 +47,39 @@
                 </form>
                 
                 <select id="typeTask">
-                    <option value="typeTask">Type task</option>
-                    <option value="personal">Personal</option>
-                    <option value="professional">Professional</option>
-                    <option value="academic">Academic</option>
-                    <option value="household">Household</option>
-                    <option value="leisure">Leisure</option>
-                    <option value="voluntering">Voluntering</option>
-                    <option value="personal">Personal</option>
-                    <option value="planning">Planning</option>
+                    <option value="">Type task</option>
+                    <option value="1">Personal</option>
+                    <option value="2">Professional</option>
+                    <option value="3">Academic</option>
+                    <option value="4">Household</option>
+                    <option value="5">Leisure</option>
+                    <option value="6">Voluntering</option>
+                    <option value="7">Personal</option>
+                    <option value="8">Planning</option>
                 </select>
             </div>
             
             <div id="filter"> <!-- Contêiner para o input e o botão -->
                 <input type="text" id="descFilter" placeholder="Description">
-                <button id="search">Search</button>
+                <button id="search" onclick="searchTasks()">Search</button>
             </div>
         </div>
         
 
+         <!-- Tabela que exibirá as tarefas carregadas da base de dados -->
+         <table class="table mb-4">
+            <thead>
+                <!-- Cabeçalho da tabela, com três colunas: Data, Tipo e Descrição -->
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <!-- Corpo da tabela onde as tarefas serão listadas -->
+            <tbody id="listTasks"></tbody> <!-- Este tbody será preenchido dinamicamente via JavaScript -->
+        </table>
+        
         <ul id="list">
             
         </ul>

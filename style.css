@@ -1,13 +1,12 @@
-
 body {
     display: flex;
     background-color: rgb(183, 179, 241);
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     border: 2px solid black;
     margin: 0;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     background-color: rgb(6, 3, 53);
@@ -23,7 +22,7 @@ header{
     font-size: 2em;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -36,11 +35,11 @@ nav a{
     box-sizing: border-box;
 }
 
-a:hover{
+a:hover {
     color: rgb(161, 153, 153);
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,10 +47,12 @@ main{
     height: 100vh;
     margin: 0 auto;
 }
+
 #date {
     align-content: center;
 }
-#day, #year{
+
+#day, #year {
     background-color: #faf5f5;
     border-color: rgb(215, 201, 241);
     border: 2px solid #ccc;
@@ -60,15 +61,15 @@ main{
     width: 100%;
 }
 
-select{
+select {
     font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #faf5f5;
     margin: 30px;
     border: none;
 }
 
-select:hover{
+select:hover {
     cursor: pointer;
 }
 
@@ -77,18 +78,18 @@ select:hover{
     color: gray;
 }
 
-h3{
+h3 {
     color: rgb(6, 3, 53);
     font-weight: bold;
 }
 
-li{
+li {
     margin-bottom: 10px;
     color: white;
     list-style-type: none;
 }
 
-.todo-container{
+.todo-container {
     background-color: #faf5f5;
     box-shadow: 0 0 6px #faf5f5;
     text-align: center;
@@ -111,7 +112,7 @@ input.description {
     border-radius: 10px;
     padding: 10px;
     margin-right: 10px;
-    width: 450px;
+    width: 600px;
 }
 
 #buttonAddTask {
@@ -127,11 +128,11 @@ input.description {
 
 #buttonAddTask:hover {
     text-shadow: 0 0 10px white;
-    background-color: #0f334b; 
-    transform: scale(1.1); 
+    background-color: #0f334b;
+    transform: scale(1.1);
 }
 
-#buttonRemoveTask{
+#buttonRemoveTask {
     font-weight: bold;
     background-color: #03263d;
     color: white;
@@ -143,13 +144,13 @@ input.description {
     margin-top: 40px;
 }
 
-#buttonRemoveTask:hover{
-    background-color: #0f334b; 
+#buttonRemoveTask:hover {
+    background-color: #0f334b;
     text-shadow: 0 0 10px white;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-#buttonMarkCompleted{
+#buttonMarkCompleted {
     font-weight: bold;
     background-color: #1c567c;
     color: white;
@@ -161,9 +162,9 @@ input.description {
     margin-top: 40px;
 }
 
-#buttonMarkCompleted:hover{
-    background-color: #3f7394; 
-    transform: scale(1.1); 
+#buttonMarkCompleted:hover {
+    background-color: #3f7394;
+    transform: scale(1.1);
     text-shadow: 0 0 10px white;
 }
 
@@ -173,20 +174,15 @@ input[type="checkbox"] {
     border-radius: 10px;
 }
 
-
-/* Style todolist.html */
-
-.register-container{
-    display: flex;
-    flex-direction: column;
+.register-container {
+    background-color: #faf5f5;
+    box-shadow: 0 0 6px #faf5f5;
     text-align: center;
-    margin: 0px;
+    flex-direction: column;
+    margin-bottom: 100px;
     padding: 10px;
     padding-bottom: 30px;
     border-radius: 10px;
-    background-color: #faf5f5;
-    box-shadow: 0 0 6px #faf5f5;
-    width: 600px;
 }
 
 #form-container {
@@ -194,13 +190,13 @@ input[type="checkbox"] {
     margin: auto;
 }
 
-#descFilter{
+#descFilter {
     display: flex;
     box-sizing: border-box;
     width: 350px;
 }
 
-#search{
+#search {
     color: white;
     text-shadow: none;
     background-color: rgb(6, 3, 53);
@@ -212,24 +208,23 @@ input[type="checkbox"] {
     font-weight: bold;
 }
 
-#search:hover{
+#search:hover {
     text-shadow: 0 0 10px white;
-    background-color: #0f334b; 
-    transform: scale(1.1); 
+    background-color: #0f334b;
+    transform: scale(1.1);
 }
 
-#filter{
+#filter {
     display: flex;
     width: 100%;
 }
 
-#descFilter{
+#descFilter {
     width: 100%;
     background-color: rgb(215, 201, 241);
-    width: 100%;
     border: none;
     border-radius: 10px;
     padding: 10px;
     margin-right: 10px;
-    width: 450px;
+    width: 600px;
 }
