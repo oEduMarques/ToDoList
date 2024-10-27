@@ -8,16 +8,13 @@ class Task{
     }
 
     validateData() {
-        for (key in this){
-            if (this[key] === undefined || this[key] === this[task].trim()) {
-                console.error(`O campo${key} é obrigatório!`)
-                // stats.innerHTML = 'Please select a valid date';
-                // stats.style.color = 'red';
-                // return false;
+        for (let key in this) {
+            if (this[key] === undefined || this[key] === "") {
+                console.error(`The field ${key} is required.`);
+                return false; // Retorna falso se algum campo estiver vazio ou indefinido
             }
-
-            return true;
         }
+        return true; // Retorna verdadeiro se todos os campos forem válidos
     }
 }
 
@@ -34,18 +31,21 @@ class Database{
     }
 
     loadTasks() {
-        let tasks = []
-        let id = localStorage.getItem('id')
+        const tasks = [];
+        const id = localStorage.getItem('id');
 
-        for(let i = 1; i<= id; i++) {
+        for (let i = 1; i <= id; i++) {
             try {
-                let task = JSON.parse(localStorage.getItem(i))
-                tasks.push(task)
-            } catch (error){
-                console.error(`Erro ao carregar a tarefa com id ${id}`)
-
+                const task = JSON.parse(localStorage.getItem(i));
+                if (task !== null) {
+                    task.id = i; // Adiciona o ID à tarefa para referência
+                    tasks.push(task);
+                }
+            } catch (e) {
+                console.error(`Error loading task with id ${i}:`, e);
             }
         }
+        return tasks; // Retorna um array com todas as tarefas
     }
 
     createTask(task) {
@@ -78,7 +78,7 @@ class Database{
 
 const database = new Database()
 
-let buttonAddList = document.getElementById('buttonAddTask');
+// let buttonAddList = document.getElementById('buttonAddTask');
 
 function registerTask() {
     let year = document.getElementById('year').value
@@ -98,6 +98,14 @@ function registerTask() {
     }
 }
 
+function resetForm() {
+    document.getElementById('year').value = '';
+    document.getElementById('month').value = '';
+    document.getElementById('day').value = '';
+    document.getElementById('type').value = '';
+    document.getElementById('description').value = '';
+}
+
 function loadTasks(tasks = database.loadTasks()) {
     const listTasks = document.getElementById('listTasks');
     listTasks.innerHTML = ''; // Limpa a lista existente
@@ -106,7 +114,7 @@ function loadTasks(tasks = database.loadTasks()) {
         const row = listTasks.insertRow();
 
         row.insertCell(0).innerHTML = `${t.day}/${t.month}/${t.year}`;
-
+        
         // Converte o tipo de tarefa de número para texto
         row.insertCell(1).innerHTML = getTaskTypeName(t.type);
         row.insertCell(2).innerHTML = t.description;
